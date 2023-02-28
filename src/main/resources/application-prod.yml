@@ -1,6 +1,4 @@
 server:
-  # 上下文路径
-  context-path: /class-easy
   port: 8090
   session:
     timeout: 7200
@@ -35,6 +33,23 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+
+  # jpa配置
+  jpa:
+    database: mysql #选择数据库,我用的mysql
+    show-sql: true #是否打印SQL语句到控制台
+    hibernate:
+      ddl-auto: update
+
+
+  # thymeleaf模板配置
+  thymeleaf:
+    suffix: .html
+    prefix:
+      classpath: /templates/
+    cache: false
+
 
 
 # 日志配置
