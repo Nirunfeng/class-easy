@@ -29,6 +29,44 @@ public class WebController {
     }
 
     /**
+     * 网站首页
+     * */
+    @GetMapping("/")
+    public String index(){
+        return "/index";
+    }
+
+    /**
+     * 联系我们
+     * */
+    @GetMapping("/contacts")
+    public String contacts(){
+        return "/common/contacts";
+    }
+
+    /**
+     * 关于我们
+     * */
+    @GetMapping("/about")
+    public String about(){
+        return "/common/about";
+    }
+
+    /**用户个人中心默认展示图*/
+    @GetMapping("/home/console")
+    public String homeconsole(){
+        return "/admin/home/console";
+    }
+
+    /**
+     * 管理员首页默认展示图
+     * */
+    @GetMapping("/echars/console")
+    public String echars(){
+        return "/admin/echars/console";
+    }
+
+    /**
      * 后台管理首页
      * */
     @GetMapping("/admin/index")
